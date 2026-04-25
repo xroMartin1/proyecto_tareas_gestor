@@ -72,7 +72,7 @@ proyecto_tareas_gestor/
  
   
 
-## ⚙️ Instalación y uso
+## Instalación y uso
 
   
 
@@ -103,7 +103,7 @@ cd proyecto_tareas_gestor
 
   
 
-## 📌 Posibles mejoras
+## Posibles mejoras
 
   
 
@@ -115,7 +115,7 @@ cd proyecto_tareas_gestor
 
 - Modo oscuro
 
-## 📜 Licencia
+## Licencia
 
  
 Este proyecto fue desarrollado con fines educativos y de práctica.
