@@ -1,0 +1,243 @@
+/* 3.1 Variables CSS */
+:root {
+  --color-primario: #2563eb;
+  --color-secundario: #7c3aed;
+  --color-terciario: #10b981;
+
+  --color-pendiente: #3b82f6;
+  --color-progreso: #f59e0b;
+  --color-completado: #10b981;
+
+  --fuente-principal: "Segoe UI", system-ui, sans-serif;
+  --tamano-base: 16px;
+
+  --espacio-xs: 0.5rem;
+  --espacio-sm: 1rem;
+  --espacio-md: 1.5rem;
+  --espacio-lg: 2rem;
+}
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-base);
+  background-color: #f4f7f6;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+/* Header & Nav */
+header {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primario);
+}
+
+.logo img {
+  height: 24px;
+  transform: scale(1.8);
+  transform-origin: center right;
+  transition: all 0.2s ease-in;
+}
+
+.logo img:hover {
+  transform: scale(1.9);
+}
+
+/* Formulario */
+.task-form {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+textarea,
+select,
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--color-terciario);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+/* Tablero y Tarjetas */
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.columna {
+  padding: 0.8rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.03);
+  min-height: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.columna h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+#pendientes h3 {
+  color: var(--color-pendiente);
+}
+#en-progreso h3 {
+  color: var(--color-progreso);
+}
+#completadas h3 {
+  color: var(--color-completado);
+}
+
+.tarea-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #ccc;
+  word-wrap: break-word;
+}
+
+.tarea-card.alta {
+  border-left-color: #ef4444;
+}
+.tarea-card.media {
+  border-left-color: var(--color-progreso);
+}
+.tarea-card.baja {
+  border-left-color: var(--color-completado);
+}
+
+.tarea-titulo {
+  font-size: 1.1rem;
+  color: #333;
+}
+.tarea-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+.tarea-meta {
+  font-size: 0.75rem;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+}
+
+.acciones {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.acciones button {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.btn-eliminar {
+  background-color: #fee2e2 !important;
+  border-color: #f87171 !important;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: whitesmoke;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}

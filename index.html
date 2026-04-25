@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Información</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <a class="logo" href="#"
+          ><img src="assets/img/logo.png" alt="Logo"
+        /></a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="task-form">
+        <h1>Nueva Tarea</h1>
+        <form id="formulario-tarea">
+          <div class="input-group">
+            <label for="titulo">Título (Obligatorio)</label>
+            <input
+              type="text"
+              id="titulo"
+              placeholder="Ej: Estudiar para el examen"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="descripcion">Descripción (Opcional)</label>
+            <textarea
+              id="descripcion"
+              placeholder="Detalles de la tarea..."
+              rows="2"
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="prioridad">Prioridad</label>
+              <select id="prioridad" required>
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="fecha">Fecha límite</label>
+              <input type="date" id="fecha" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">Agregar Tarea</button>
+        </form>
+      </section>
+
+      <section class="board">
+        <div class="columna" id="pendientes">
+          <h3>Pendientes <span class="contador">0</span></h3>
+          <div class="tareas-container"></div>
+        </div>
+
+        <div class="columna" id="en-progreso">
+          <h3>En Progreso <span class="contador">0</span></h3>
+          <div class="tareas-container"></div>
+        </div>
+
+        <div class="columna" id="completadas">
+          <h3>Completadas <span class="contador">0</span></h3>
+          <div class="tareas-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Gestor de Tareas - 2026</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

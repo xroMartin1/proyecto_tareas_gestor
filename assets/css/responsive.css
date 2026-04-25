@@ -1,0 +1,33 @@
+/* 1. MÓVIL (Por defecto ya está optimizado, pero ajustamos el form-row) */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr; /* Una columna en celulares */
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: var(--espacio-sm);
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* 2. TABLET (De 601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .board {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en tablets */
+  }
+
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* 3. ESCRITORIO (Más de 1024px) */
+@media (min-width: 1025px) {
+  .board {
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas en pantallas grandes */
+  }
+}
